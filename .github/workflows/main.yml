@@ -1,7 +1,7 @@
-#CMST386
+#CMST386-PCRESS
 #Example name: Deploy HTML Files to AppService - COURSENAME
 
-name: Deploy HTML Files to AppService - CMST386
+name: Deploy HTML Files to AppService - CMST386-PCRESS
 
 on:
 

@@ -117,6 +117,7 @@ a:hover {
 }
 
 .proposalImage {
+    width: 50%;
     max-width: 600px;
     max-height: 1000px;
 }

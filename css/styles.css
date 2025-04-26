@@ -116,6 +116,11 @@ a:hover {
     transform: scale(1.05);
 }
 
+.proposalImage {
+    max-width: 600px;
+    max-height: 1000px;
+}
+
 /* Nav Panel Stuff */
 
 .navContainer {

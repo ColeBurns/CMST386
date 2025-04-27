@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="web design, student projects, HTML, CSS, CMST386, UMGC, classwork, school">
+    <meta name="description" content="This is my website presentation, explaining and demonstrating 
+    SASS principles and CSS Preprocessing.">
+    <title>CMST386 - Project 3: Preprocessing - P. David Cress</title>
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+
+  <nav class="navContainer">
+    <input type="checkbox" id="menu-toggle">
+    <label for="menu-toggle" class="hamburger">&#9776;</label>
+  
+    <ul class="navPanel">
+      <li><a href="../index.html">CMST386 Home</a></li>
+      <li><a href="../project1/project1.html">Project 1</a></li>
+      <li><a href="../project2/project2.html">Project 2</a></li>
+      <li><a href="../project3/project3.html">Project 3</a></li>
+      <li><a href="../project4/project4.html">Project 4</a></li>
+    </ul>
+  </nav>
+
+  <header class="titleContainer">
+    <h1 style="color: white;">Preprocessing</h1>
+  </header>
+
+  <main class="container">
+    <!-- Breadcrumbs -->
+    <nav class="breadcrumbs">
+      <a href="../index.html">Home</a> &gt;
+      <a href="project3.html">Project 3</a>
+    </nav>
+
+    <section class="textContainer">
+      <h2>Implementing Preprocessing</h2>
+      <p>
+        Preprocessing can be implemented both client-side and server-side. Client-side preprocessing involves 
+        the use of tools like Sass or LESS to write code in a more structured, modular way. The processed CSS 
+       is then sent to the browser for rendering. Server-side preprocessing involves tools like Node.js or 
+        Ruby on Rails to compile SCSS or LESS files before serving them to the client. Server-side 
+        preprocessing reduces the browser's workload and improves performance.
+      </p>
+    </section>
+
+    <section class="textContainer">
+      <h2>SASS Mechanisms</h2>
+      <p>
+        In SASS, key mechanisms include variables, which store reusable values like colors or font sizes. 
+        Mixins are reusable code blocks that can include styles and can accept parameters. Functions in 
+        SASS allow you to return calculated values, such as adjusting color brightness. Operators perform 
+        mathematical operations, like addition or subtraction, on numeric values. Nested variables help 
+        group related styles together and maintain organization by nesting code inside one another, making 
+        it easier to manage complex CSS structures. These features provide more control and maintainability 
+        over traditional CSS, especially for large projects.
+      </p>
+    </section>
+
+    <section class="textContainer">
+      <h2>SASS Implementation</h2>
+      <p>
+        To implement SASS preprocessing, I created a file with the .scss extension, named style.scss. 
+        Then, I used a SASS compiler (such as the Live Sass Compiler in VS Code) to compile the .scss file 
+        into a .css file. The result is a more manageable CSS file with features like variables, mixins, 
+        and nesting. The compiled CSS file is linked to my HTML files using a standard <link> tag. Once 
+        changes are made to the SCSS file, the compiler automatically re-compiles the .css file, ensuring 
+        any changes to the SCSS document are applied to the HTML page.
+      </p>
+    </section>
+
+    <section class="cta-container">
+      <a href="#top" class="cta-button">Back to Top</a>
+    </section>
+  </main>
+
+  <footer class="footerContainer">
+    <p>&copy; Created by P. David Cress 2025</p>
+  </footer>
+</html>

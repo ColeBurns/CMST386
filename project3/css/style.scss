@@ -1,0 +1,273 @@
+// VARIABLES
+$primary-color: #00c8ff;
+$secondary-color: #f6ff00;
+$text-color: #000000;
+
+$background-color: #b3b3b3;
+$text-main-color: #333;
+$link-color: #007bff;
+$hover-border-color: #a00c0c;
+
+$container-bg: white;
+$container-shadow: 0 0 10px rgba(30, 29, 29, 0.1);
+$nav-bg: #333;
+$dropdown-bg: #444;
+$dark-text: #222;
+$footer-bg: rgb(30, 30, 30);
+$footer-text: rgb(255, 255, 255);
+
+// MIXINS
+@mixin rounded-button {
+  border-radius: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 10px 20px;
+  background: linear-gradient(to right, $primary-color, $secondary-color);
+  color: $text-color;
+  text-decoration: none;
+}
+
+// BASE
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: $background-color;
+  color: $text-main-color;
+  text-align: center;
+  scroll-behavior: smooth;
+}
+
+// TYPOGRAPHY
+h1, h2, h3, h4, h5 {
+  font-family: Impact, sans-serif;
+  color: $dark-text;
+}
+
+h1 { font-size: 48px; color: $text-color; }
+h2 { font-size: 36px; }
+h3 { font-size: 30px; }
+h4 { font-size: 24px; }
+h5 { font-size: 20px; }
+
+// GENERAL LINKS
+a {
+  color: $link-color;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+// CTA BUTTON
+.cta-button {
+  @include rounded-button;
+  display: inline-block;
+  margin: 20px auto;
+  max-width: 300px;
+  width: 100%;
+  text-align: center;
+}
+
+.cta-container {
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: center;
+}
+
+// BREADCRUMBS
+.breadcrumbs {
+  grid-column: 1 / -1;
+  justify-self: start;
+  display: block;
+  width: 100%;
+  text-align: left;
+  margin: 10px 0 20px;
+  font-size: 14px;
+
+  a {
+    color: $link-color;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+// MAIN LAYOUT (GRID)
+main {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  align-items: start;
+  text-align: left;
+}
+
+// CONTAINER BLOCKS
+.container {
+  width: 80%;
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 10px;
+  background: $container-bg;
+  box-shadow: $container-shadow;
+  border-radius: 5px;
+}
+
+.titleContainer {
+  width: 100%;
+  max-width: 1200px;
+  margin: 30px auto;
+  padding: 15px;
+  background: rgb(97, 97, 97);
+  border: 3px solid rgb(49, 49, 49);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  border-radius: 7px;
+}
+
+.textContainer {
+  width: 75%;
+  max-width: 750px;
+  margin: 20px auto;
+  padding: 20px;
+  background: $container-bg;
+  box-shadow: $container-shadow;
+  border-radius: 5px;
+}
+
+.footerContainer {
+  width: 50%;
+  max-width: 400px;
+  margin: 20px auto;
+  padding: 10px;
+  background: $footer-bg;
+  box-shadow: $container-shadow;
+  border-radius: 5px;
+  color: $footer-text;
+}
+
+// GALLERY PANEL (THUMBNAILS)
+#galleryPanel {
+  width: 620px;
+  margin: auto;
+  padding: 20px;
+  background: $container-bg;
+  box-shadow: $container-shadow;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.thumbnail {
+  width: 100%;
+  height: 100px;
+  object-fit: cover;
+  margin: 5px;
+  cursor: pointer;
+  transition: transform 0.3s, border 0.3s;
+
+  &:hover {
+    border: 2px solid $hover-border-color;
+    transform: scale(1.05);
+  }
+}
+
+// NAVBAR + HAMBURGER MENU
+.navContainer {
+  width: 90%;
+  max-width: 1000px;
+  margin: 30px auto;
+  padding: 10px;
+  background: transparent; 
+  box-shadow: none;
+  border-radius: 7px;
+  position: relative;
+}
+
+#menu-toggle {
+  display: none;
+}
+
+.hamburger {
+  display: none;
+  font-size: 30px;
+  cursor: pointer;
+  color: $text-color;
+  position: absolute;
+  right: 20px;
+  top: 2px;
+}
+
+.navPanel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  background-color: $nav-bg;
+
+  a {
+    display: block;
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+
+    &:hover {
+      background-color: #111;
+    }
+  }
+}
+
+// DROPDOWN
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  background-color: $dropdown-bg;
+  min-width: 160px;
+  z-index: 1;
+
+  li a {
+    padding: 12px 16px;
+  }
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+// MEDIA QUERIES
+@media (max-width: 768px) {
+  
+  main {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .container {
+    width: 95%;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .navPanel {
+    display: none;
+    flex-direction: column;
+    background-color: $nav-bg;
+    width: 100%;
+    text-align: center;
+    border-radius: 0 0 10px 10px;
+  }
+
+  #menu-toggle:checked + .hamburger + .navPanel {
+    display: flex;
+  }
+}
+
+@media (max-width: 480px) {
+  // optional extra mobile tweaks
+}

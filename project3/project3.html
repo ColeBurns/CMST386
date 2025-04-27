@@ -1,58 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="keywords" content="web design, student projects, HTML, CSS, CMST386, UMGC, classwork, school">
-    <meta name="description" content="A placeholder for my submission for Project 3 of CMST386">
-    <title>>CMST386 - Project 3 Placeholder - P. David Cress</title>
-    <link rel="stylesheet" href="../css/styles.css">
-</head>
-<body>
-    <header>
-        <div class="titleContainer">
-            <h1>CMST386 - Project 3 Placeholder</h1>
-        </div>
-    </header>
+    <meta name="description" content="This is my website presentation, explaining and demonstrating 
+    SASS principles and CSS Preprocessing.">
+    <title>CMST386 - Project 3 - P. David Cress</title>
+    <link rel="stylesheet" href="css/style.css">
+  </head>
 
-    <main>
-        <!-- Nav Bar -->
-        <div class="navContainer">
-            <nav>
-                <ul class="navPanel">
-                    <li><a href="../index.html">CMST386 Home</a></li>
-                    
-                    <li class="dropdown">
-                        <a href="../project1/project1.html" class="dropbtn">Project 1</a>
-                        <ul class="dropdown-content">
-                            <li>
-                                <a href="../project1/gallery.html">Gallery</a>
-                            </li>
-                        </ul>
-                    </li>
+  <!-- How I implemented SASS: 
+    I used the Live Sass Compiler extension in Visual Studio Code to compile my SCSS file into CSS. 
+    The SCSS file, 'style.scss', includes variables and mixins for reusable styles. 
+    Once saved, the extension automatically compiles the file into 'style.css', which I then linked 
+    to this HTML document with the above <link> tag. This process makes it easier to manage and 
+    maintain my CSS code. 
+  -->
 
-                    <li><a href="../project2/project2.html">Project 2</a></li>
+  <!-- Nav Bar/Hamburger Menu -->
+  <nav class="navContainer">
+    <input type="checkbox" id="menu-toggle">
+    <label for="menu-toggle" class="hamburger">&#9776;</label>
+  
+    <ul class="navPanel">
+      <li><a href="../index.html">CMST386 Home</a></li>
+      <li><a href="../project1/project1.html">Project 1</a></li>
+      <li><a href="../project2/project2.html">Project 2</a></li>
+      <li><a href="../project3/project3.html">Project 3</a></li>
+      <li><a href="../project4/project4.html">Project 4</a></li>
+    </ul>
+  </nav>
 
-                    <li><a href="../project3/project3.html">Project 3</a></li>
+  <!-- Page Title -->
+  <header class="titleContainer">
+    <h1 style="color: white;">CMST386 - Project 3: Responsive Design</h1>
+    <h2 style="color: white;">and CSS Preprocessors</h2>
+  </header>
 
-                    <li><a href="../project4/project4.html">Project 4</a></li>
-                </ul>
-            </nav>
-        </div>
+  <!-- Page Body -->
+  <main class="container">
+    <!-- Breadcrumbs -->
+    <nav class="breadcrumbs">
+      <a href="index.html">Home</a> &gt;
+      <a href="project3.html">Project 3</a>
+    </nav>
+    <h2>Project 3</h2>
+    <br>
 
-        <div class="container">
-            <p>Placeholder for Project 3 Submission</p>
-        </div>
-    </main>
+    <section class="textContainer">
+     <h3>Responsive Design Importance & Impact</h3>
+      <p>
+        Responsive design is crucial because it ensures a website’s layout adapts seamlessly to various 
+        screen sizes, from desktop monitors to smartphones. This improves user experience, leading to 
+        increased engagement and retention. A well-designed responsive site enhances accessibility, 
+        reaching a broader audience and catering to users on different devices, ultimately benefiting 
+        the business.
+      </p>
+    </section>
 
-    <footer>
-        <div class="footerContainer">
-            <p>P. David Cress<br>
-                CMST386: Principles of Web Design and Technology II<br>
-                UMGC - Spring 2025<br>
-                Instructor: Prof. Leslie Allen
-            </p>
-        </div>
-    </footer>
-</body>
+    <section class="textContainer">
+      <h3>Google Analytics Report Types</h3>
+      <p>
+        Google Analytics offers several reports that help track user behavior. First, the Audience 
+        Overview report provides demographic data, such as the user's location, age, and interests. 
+        This helps identify the type of audience visiting your site. Second, the Behavior Flow report 
+        shows how users navigate through the site, highlighting popular paths or drop-off points. This 
+        can help optimize content placement. Lastly, the Acquisition Report tracks how visitors found 
+        your site, whether through search engines, social media, or referrals. These reports help 
+        marketers and webmasters understand which channels and content resonate most with the target 
+        audience.
+      </p>
+    </section>
+
+    <section class="cta-container">
+      <a class="cta-button" href="preprocessing.html">Learn Preprocessing</a>
+    </section>
+  </main>
+
+  <footer class="footerContainer">
+    <p>&copy; Created by P. David Cress 2025<br>
+        CMST386: Principles of Web Design and Technology II<br>
+        UMGC - Spring 2025<br>
+        Instructor: Prof. Leslie Allen
+    </p>
+  </footer>
 </html>

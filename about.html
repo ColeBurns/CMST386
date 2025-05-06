@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="keywords" content="web design, student projects, HTML, CSS, CMST386, UMGC, classwork, school">
+  <meta name="description" content="The homepage for my website for artists to share and sell prints of their work">
+  <meta name="author" content="P. David Cress">
+  <meta name="copyright" content="2025 P. David Cress">
+  <meta name="robots" content="index, follow">
+  <title>Gallery Collective: About Us</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="favicon/favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <h1 class="site-title">About Gallery Collective</h1>
+      <nav aria-label="Main navigation">
+        <ul class="nav-list">
+          <li><a href="project4.html">Home</a></li>
+          <li><a href="about.html" aria-current="page">About</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="cart.html">Cart</a></li>
+          <li><a href="account.html">My Account</a></li>
+        </ul>
+      </nav>
+
+      <div class="search-container">
+        <form action="https://duckduckgo.com/" method="get" class="search-form">
+            <label for="search" class="visually-hidden">Search</label>
+            <input type="text" name="q" id="search" placeholder="Search the site...">
+            <input type="hidden" name="sites" value="example.com"> <!-- Replace with actual domain -->
+            <button type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Artist Bio Section -->
+    <section class="text-container">
+      <h2>Meet the Artist</h2>
+      <img src="images/artist.jpg" alt="Portrait of the artist" width="250" height="250">
+      <div class="bio-text">
+        <h3>P. David Cress</h3>
+        <p>David started drawing in his youth, and has been a self-taught illustrator for over 20 years. 
+          Heavily inflenced by comics, manga, and video games, he continues to develop his own stylized and unique
+          aesthetic while  expanding upon his existing skill set by constantly using new tools and forms of media.</p>
+          <br><br>
+        <p><strong>Most Commonly Used Media:</strong></p><br>
+        <ul>
+          <li><strong>Papers:</strong> Fabriano Artistico 100% Cotton Acquarello Watercolor Paper (Hot Pressed, 140 lbs.),
+            Arches 100% Cotton Watercolor Paper (Hot Pressed, 140 lbs.), & Strathmore 500-Series 100% 
+            Cotton Bristol (Plate)</li>
+          <li><strong>Pencils:</strong> Staedtler Mars Tecnico 2mm Mechanical Pencil & Staedtler Night Blue 2mm Mechanical Pencil</li>
+          <li><strong>Lead/Graphite:</strong> Prismacolor Turquoise Non-Photo Blue 2mm Lead, Koh-I-Noor 2mm Graphite (F), 
+            Mitsubishi 2mm Graphite (4H, 2H, HB & 2B)</li>
+          <li><strong>Pens:</strong> Koh-I-Noor No 130 N Dip Pen & Tachikawa Model 40 Comic Pen Nib Holder</li>
+          <li><strong>Inks:</strong> Kuretake ZIG Special Black Ink 60, Winsor Newton India Ink, & Higgins Caligraphy Black Ink</li>
+          <li><strong>Colored Pencils:</strong> Prismacolor Premier Verithin Colored Pencils (Hard Core), Caran D'Ache Supracolor II 
+            Watercolor Pencils, & Pandafly  Colour Charcoal Pencils</li>
+          <li><strong>Markers:</strong> Ohuhu Alcohol Markers (Fine & Brush Tip), Winsor Newton Inks (Colored), Zeyar Acrylic Paint Pens,
+            Chromatek Watercolor Paint Pens, Pilot Silver & Gold Paint Markers, & Artist's Loft Colored Fineliners</li>
+          <li><strong>Paints:</strong> Winsor Newton Watercolor Paint (Professional & Cotman series), Winsor Newton Gouache Paint (Designer & 
+            Standard), HIMI Gouache Paint, & Liquitex Basics Acrylic Fluid (Black)</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="text-container">
+      <div class="button-group">
+        <a href="faq.html" class="button">F.A.Q.</a>
+        <a href="contact.html" class="button">Contact Us</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; Created by P. David Cress 2025<br>
+        CMST386: Principles of Web Design and Technology II<br>
+        UMGC - Spring 2025<br>
+        Instructor: Prof. Leslie Allen
+      </p>
+      <p><a href="privacy.html">Privacy Policy</a></p>
+      <p id="datetime">Loading current date/time…</p>
+    </div>
+    <div class="call-to-action container">
+        <a href="../index.html" class="button">CMST386 Index</a>
+    </div>
+  </footer>
+
+  <script>
+    // Date & Time
+    const dtElem = document.getElementById('datetime');
+    dtElem.textContent = new Date().toLocaleString();
+  </script>
+</body>
+</html>

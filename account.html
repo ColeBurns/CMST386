@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="web design, student projects, HTML, CSS, CMST386, UMGC, classwork, school">
+    <meta name="description" content="The homepage for my website for artists to share and sell prints of their work">
+    <meta name="author" content="P. David Cress">
+    <meta name="copyright" content="2025 P. David Cress">
+    <meta name="robots" content="index, follow">
+    <title>Gallery Collective: My Account</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="favicon/favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+        <h1 class="site-title">Gallery Collective</h1>
+        <nav aria-label="Main navigation">
+            <ul class="nav-list">
+            <li><a href="project4.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="cart.html">Cart</a></li>
+            <li><a href="account.html" aria-current="page">My Account</a></li>
+            </ul>
+        </nav>
+
+          <div class="search-container">
+            <form action="https://duckduckgo.com/" method="get" class="search-form">
+                <label for="search" class="visually-hidden">Search</label>
+                <input type="text" name="q" id="search" placeholder="Search the site...">
+                <input type="hidden" name="sites" value="example.com"> <!-- Replace with actual domain -->
+                <button type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="account-container">
+        <h2>Account Overview</h2>
+
+        <!-- Customer Information -->
+        <div class="account-info">
+            <p><strong>Name:</strong> John Doe</p>
+            <p><strong>Email:</strong> johndoe@example.com</p>
+        </div>
+
+        <!-- Previous Orders -->
+        <div class="previous-orders">
+            <h3>Previous Orders</h3>
+
+            <div class="order">
+            <p><strong>Order Date:</strong> March 25, 2025</p>
+            <ul>
+                <li>11x14" Paper Print – "Despair" – $34.99</li>
+                <li>16x20" Metal Print – "Destroyer" – $144.99</li>
+            </ul>
+            <p><strong>Total:</strong> $179.98</p>
+            <a href="#" class="order-details">View Order Details</a>
+            </div>
+
+            <div class="order">
+            <p><strong>Order Date:</strong> February 18, 2025</p>
+            <ul>
+                <li>8x10" Metal Print – "Eclipse" – $49.99</li>
+                <li>11x14" Paper Print – "The Wanderer" – $29.99</li>
+            </ul>
+            <p><strong>Total:</strong> $79.98</p>
+            <a href="#" class="order-details">View Order Details</a>
+            </div>
+        </div>
+
+        <!-- Account Switch -->
+        <div class="account-switch">
+            <p>Not you? <a href="login.html">Click here to switch accounts!</a></p>
+        </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+        <p>&copy; Created by P. David Cress 2025<br>
+            CMST386: Principles of Web Design and Technology II<br>
+            UMGC - Spring 2025<br>
+            Instructor: Prof. Leslie Allen
+        </p>
+        <p><a href="privacy.html">Privacy Policy</a></p>
+        <p id="datetime">Loading current date/time…</p>
+        </div>
+        <section class="call-to-action container">
+            <a href="../index.html" class="button">CMST386 Index</a>
+        </section>
+    </footer>
+
+    <script>
+        // Date & Time
+        const dtElem = document.getElementById('datetime');
+        dtElem.textContent = new Date().toLocaleString();
+    </script> 
+</body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="web design, student projects, HTML, CSS, CMST386, UMGC, classwork, school">
+    <meta name="description" content="The homepage for my website for artists to share and sell prints of their work">
+    <meta name="author" content="P. David Cress">
+    <meta name="copyright" content="2025 P. David Cress">
+    <meta name="robots" content="index, follow">
+    <title>Gallery Collective: Privacy Policy</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="favicon/favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+        <h1 class="site-title">Gallery Collective</h1>
+        <nav aria-label="Main navigation">
+            <ul class="nav-list">
+            <li><a href="project4.html">Home</a></li>
+            <li><a href="about.html" aria-current="page">About</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="cart.html">Cart</a></li>
+            <li><a href="account.html">My Account</a></li>
+            </ul>
+        </nav>
+
+          <div class="search-container">
+            <form action="https://duckduckgo.com/" method="get" class="search-form">
+                <label for="search" class="visually-hidden">Search</label>
+                <input type="text" name="q" id="search" placeholder="Search the site...">
+                <input type="hidden" name="sites" value="example.com"> <!-- Replace with actual domain -->
+                <button type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="privacy-policy-container">
+        <h2>Privacy Policy</h2>
+
+        <p>Effective Date: 5/6/2025</p>
+
+        <p>Welcome to Gallery Collective! Your privacy is important to us. This Privacy Policy explains how we collect, 
+            use, and share your personal information when you use our services.</p>
+
+        <h3>1. Information We Collect</h3>
+        <p>We collect information that you provide to us directly, such as when you register an account, make a purchase, 
+            or contact customer support. This may include personal details like your name, email address, phone number, and 
+            payment information.</p>
+
+        <h3>2. How We Use Your Information</h3>
+        <p>Your information is used to process your orders, communicate with you regarding your purchases, and improve our 
+            services. We may also use your information to send promotional content if you have opted in to receive it.</p>
+
+        <h3>3. Sharing Your Information</h3>
+        <p>We do not share your personal information with third parties except as necessary to fulfill your order or as 
+            required by law. We may share information with service providers who assist with processing payments and shipping.</p>
+
+        <h3>4. Data Security</h3>
+        <p>We take reasonable measures to protect your personal information from unauthorized access, alteration, or disclosure. 
+            However, no security system is 100% secure, and we cannot guarantee the absolute security of your information.</p>
+
+        <h3>5. Your Rights</h3>
+        <p>You have the right to access, update, or delete your personal information. You may also opt out of receiving 
+            marketing communications at any time.</p>
+
+        <h3>6. Changes to This Policy</h3>
+        <p>We may update this Privacy Policy from time to time. Any changes will be posted on this page with an updated 
+            "Effective Date." Please review this policy periodically to stay informed about how we are protecting your information.</p>
+
+        <p>If you have any questions or concerns about this Privacy Policy, please contact us at 
+            <a href="mailto:contact@printshop.com">contact@printshop.com</a>.</p>
+
+        <div class="return-home">
+            <a href="index.html" class="btn-home">Return to Home Page</a>
+        </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+        <p>&copy; Created by P. David Cress 2025<br>
+            CMST386: Principles of Web Design and Technology II<br>
+            UMGC - Spring 2025<br>
+            Instructor: Prof. Leslie Allen
+        </p>
+        <p><a href="privacy.html">Privacy Policy</a></p>
+        <p id="datetime">Loading current date/time…</p>
+        </div>
+        <section class="call-to-action container">
+            <a href="../index.html" class="button">CMST386 Index</a>
+        </section>
+    </footer>
+
+    <script>
+        // Date & Time
+        const dtElem = document.getElementById('datetime');
+        dtElem.textContent = new Date().toLocaleString();
+    </script> 
+</body>
+</html>

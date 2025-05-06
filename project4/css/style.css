@@ -1,0 +1,749 @@
+/* style.scss */
+/* Variables */
+/* Mixins */
+/* Global Reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Base stuff */
+body {
+  font-family: "Segoe UI", "Helvetica Neue", sans-serif;
+  font-size: 1.125rem;
+  line-height: 1.5;
+  background-color: #f8f9fa;
+  color: #212529;
+}
+
+/* Links stuff */
+a {
+  color: #0077cc;
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+a:hover, a:focus {
+  color: #005999;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Accessibility stuff */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  border: 0;
+}
+
+/* Typography stuff */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold;
+  margin-bottom: 0.5em;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.75rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+/* Layout stuff */
+header,
+footer {
+  background-color: #343a40;
+  color: #ffffff;
+  padding: 1rem;
+  text-align: center;
+  font-size: 0.875rem;
+}
+
+main {
+  padding: 2rem;
+}
+
+.site-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #ffffff;
+  margin: 0;
+  padding: 0.5rem 0;
+}
+
+.container {
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+  text-justify: center;
+  display: inline-block;
+}
+
+.intro-container {
+  width: 90%;
+  max-width: 750px;
+  margin: 20px auto;
+  padding: 20px;
+  background: #ffffff;
+  box-shadow: #343a40;
+  border-radius: 5px;
+}
+
+.text-container {
+  width: 90%;
+  max-width: 750px;
+  margin: 20px auto;
+  padding: 20px;
+  background: #ffffff;
+  box-shadow: #343a40;
+  border-radius: 5px;
+}
+
+.bio-content {
+  display: block;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Navigation Bar stuff */
+nav {
+  background-color: #333;
+  padding: 10px 0;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  display: flex;
+  gap: 1rem;
+}
+nav f a {
+  color: #ffffff;
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+  padding: 5px 10px;
+  transition: background-color 0.3s ease;
+}
+nav f a:hover, nav f a:focus {
+  text-decoration: underline;
+}
+
+nav a:hover {
+  background-color: #555;
+  border-radius: 5px;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+nav li {
+  margin: 0 15px;
+}
+
+/* Search stuff */
+.search-container {
+  display: block;
+  max-width: 700px;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  text-align: center;
+}
+
+/* Hero stuff  */
+.hero > * {
+  display: block;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  text-align: center;
+  padding: 2rem;
+}
+
+.hero-text {
+  color: #343a40;
+}
+
+/* Button stuff */
+.button-group {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+  justify-content: center;
+}
+
+.button {
+  background-color: #333333;
+  color: #ffffff;
+  width: 200px;
+  height: 50px;
+  padding: 0.75rem 1.25rem;
+  text-decoration: none;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.button:hover, .button:focus {
+  background-color: #4d4d4d;
+}
+
+/* Form stuff */
+input,
+textarea,
+select,
+button {
+  font-size: 1rem;
+  color: #212529;
+  background-color: #ffffff;
+  border: 1px solid #4d4d4d;
+  padding: 0.75rem;
+}
+
+form {
+  display: grid;
+  gap: 1rem;
+}
+form fieldset {
+  border: 1px solid #505050;
+  padding: 1rem;
+}
+form legend {
+  font-weight: bold;
+}
+form label {
+  display: block;
+  margin-bottom: 0.25rem;
+}
+form input,
+form textarea,
+form select {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #505050;
+}
+
+/* Icons */
+.icon {
+  font-size: 1.25rem;
+  margin-right: 0.5rem;
+}
+
+/* Transitions stuff */
+.card {
+  transition: transform 0.3s ease-in-out;
+}
+.card:hover {
+  transform: scale(1.02);
+}
+
+/* FAQ stuff */
+.faq-content {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+.faq-content h2 {
+  margin-bottom: 2rem;
+}
+.faq-content .faq-item {
+  margin-bottom: 2rem;
+}
+.faq-content .faq-item h3 {
+  margin-bottom: 0.5rem;
+  color: #0077cc;
+}
+.faq-content .faq-item p {
+  margin: 0;
+}
+
+/* Contact Us stuff */
+.contact-container {
+  justify-content: center;
+  display: block;
+  text-align: center;
+  align-content: center;
+  padding: 2rem;
+  width: 90%;
+  max-width: 750px;
+  margin: 20px auto;
+  padding: 20px;
+  background: #ffffff;
+  box-shadow: #343a40;
+  border-radius: 5px;
+}
+
+.contact-list {
+  list-style: none;
+}
+
+.button {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: #0077cc;
+  color: white;
+  text-decoration: none;
+  border-radius: 0.25rem;
+  transition: background-color 0.3s ease;
+}
+.button:hover {
+  background-color: #005999;
+}
+
+.contact-form {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  justify-content: center;
+  justify-items: center;
+}
+.contact-form label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+.contact-form input[type=text],
+.contact-form input[type=email],
+.contact-form textarea {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1.5rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-family: inherit;
+  transition: border 0.3s ease;
+}
+.contact-form input[type=text]:focus,
+.contact-form input[type=email]:focus,
+.contact-form textarea:focus {
+  border-color: #333;
+  outline: none;
+}
+.contact-form .form-group {
+  margin-bottom: 1.5rem;
+  width: 500px;
+}
+.contact-form .form-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-start;
+}
+.contact-form .form-actions .button {
+  padding: 0.75rem 1.25rem;
+  font-size: 1rem;
+  border: none;
+  background-color: #333;
+  color: #fff;
+  border-radius: 6px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.contact-form .form-actions .button:hover, .contact-form .form-actions .button:focus {
+  background-color: #555;
+}
+
+/* Gallery stuff */
+.gallery-container {
+  text-align: center;
+  padding: 2rem;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.art-panel {
+  background-color: #f5f5f5;
+  padding: 1rem;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+.art-panel img {
+  display: block;
+  margin: 0 auto 1rem;
+  border-radius: 4px;
+}
+.art-panel figcaption {
+  margin-top: 0.5rem;
+  font-weight: bold;
+}
+.art-panel p {
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+}
+
+.art-piece {
+  text-align: center;
+  padding: 2rem;
+}
+.art-piece .piece-image-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+.art-piece img {
+  max-width: 90%;
+  max-height: 80vh;
+  height: auto;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+}
+.art-piece .button {
+  margin-top: 1.5rem;
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background-color: #444;
+  color: white;
+  text-decoration: none;
+  border-radius: 0.5rem;
+  transition: background-color 0.2s ease;
+}
+.art-piece .button:hover {
+  background-color: #222;
+}
+
+/* Piece stuff */
+.piece-image {
+  max-width: 100%;
+  display: block;
+  margin: 0 auto 1rem;
+}
+
+.piece-description {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.media-line {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.media-line i {
+  font-size: 1.25rem;
+  margin-top: 0.15rem;
+}
+
+/* Print stuff */
+.print-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+  margin: 20px auto;
+  background: #ffffff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  max-width: 900px;
+}
+
+.image-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.print-image {
+  max-width: 100%;
+  height: auto;
+  border: 1px solid #ccc;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.print-options {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  width: 100%;
+  max-width: 700px;
+}
+
+.print-option {
+  background: #f8f8f8;
+  padding: 1rem;
+  border-radius: 6px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.price-label {
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.print-button {
+  padding: 10px 20px;
+  font-size: 14px;
+  background-color: #333;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background-color 0.3s;
+}
+.print-button:hover {
+  background-color: #555;
+}
+
+/* Cart stuff */
+.cart-container {
+  max-width: 700px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: #ffffff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  text-align: center;
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #ddd;
+  padding: 1rem 0;
+}
+.cart-item .item-name {
+  font-weight: 500;
+}
+.cart-item .art-title {
+  font-style: italic;
+}
+.cart-item .item-price {
+  font-weight: bold;
+}
+
+.cart-total {
+  margin-top: 1.5rem;
+  font-size: 1.2rem;
+}
+
+.cart-buttons {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.cart-button {
+  padding: 0.75rem 1.5rem;
+  background-color: #333;
+  color: #fff;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+.cart-button:hover {
+  background-color: #555;
+}
+.cart-button.clear {
+  background-color: #888;
+}
+.cart-button.clear:hover {
+  background-color: #aaa;
+}
+
+/* Account stuff */
+.account-container {
+  max-width: 700px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: #ffffff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+}
+
+.account-info {
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
+}
+
+.account-switch {
+  margin-top: 2rem;
+  text-align: center;
+}
+.account-switch a {
+  color: #4d4d4d;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+.account-switch a:hover {
+  color: #666666;
+}
+
+.previous-orders h3 {
+  margin-bottom: 1.2rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+.previous-orders .order {
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 1rem;
+}
+.previous-orders .order ul {
+  padding-left: 20px;
+  margin: 0;
+  list-style-type: none;
+}
+.previous-orders .order .order-details {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: #333;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+.previous-orders .order .order-details:hover {
+  background-color: #555;
+}
+
+/* Log-in stuff */
+.login-container {
+  width: 65%;
+  max-width: 550px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+.login-container h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #4d4d4d;
+}
+.login-container .form-group {
+  margin-bottom: 1.25rem;
+}
+.login-container .form-group label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+.login-container .form-group input {
+  width: 100%;
+  padding: 0.75rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+.login-container .form-group input:focus {
+  outline: none;
+  border-color: #4d4d4d;
+}
+.login-container .submit-btn {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #4d4d4d;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.login-container .submit-btn:hover {
+  background-color: #666666;
+}
+.login-container .forgot-password {
+  text-align: center;
+  margin-top: 1rem;
+}
+.login-container .forgot-password a {
+  color: #4d4d4d;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+.login-container .forgot-password a:hover {
+  color: #666666;
+}
+
+/* Privacy stuff */
+.privacy-policy-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+.privacy-policy-container h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #4d4d4d;
+}
+.privacy-policy-container h3 {
+  color: #4d4d4d;
+  margin-top: 1.25rem;
+}
+.privacy-policy-container p {
+  line-height: 1.6;
+}
+.privacy-policy-container .return-home {
+  text-align: center;
+  margin-top: 2rem;
+}
+.privacy-policy-container .return-home .btn-home {
+  padding: 0.75rem 1.25rem;
+  background-color: #4d4d4d;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  text-decoration: none;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+}
+.privacy-policy-container .return-home .btn-home:hover {
+  background-color: #666666;
+}/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="keywords" content="web design, student projects, HTML, CSS, CMST386, UMGC, classwork, school">
+  <meta name="description" content="The homepage for my website for artists to share and sell prints of their work">
+  <meta name="author" content="P. David Cress">
+  <meta name="copyright" content="2025 P. David Cress">
+  <meta name="robots" content="index, follow">
+  <title>Gallery Collective: Piece</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="favicon/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <div class="container">
+        <h1 class="site-title">Gallery Collective</h1>
+        <nav aria-label="Main navigation">
+            <ul class="nav-list">
+            <li><a href="project4.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="gallery.html" aria-current="page">Gallery</a></li>
+            <li><a href="cart.html">Cart</a></li>
+            <li><a href="account.html">My Account</a></li>
+            </ul>
+        </nav>
+
+          <div class="search-container">
+            <form action="https://duckduckgo.com/" method="get" class="search-form">
+                <label for="search" class="visually-hidden">Search</label>
+                <input type="text" name="q" id="search" placeholder="Search the site...">
+                <input type="hidden" name="sites" value="example.com"> <!-- Replace with actual domain -->
+                <button type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+    </header>
+
+    <main class="text-container">
+        <section class="art-piece">
+            <h2 id="piece-title">Loading...</h2>
+            <div class="piece-image-wrapper">
+                <img id="piece-img" src="" alt="Artwork Image" />
+            </div>
+            <p id="piece-description"></p> <br>
+
+            <div class="media-line">
+                <i class="fa-solid fa-scroll"></i>
+                <p id="piece-paper"></p>
+                <br>
+            </div>
+            <div class="media-line">
+                <i class="fa-solid fa-pencil"></i>
+                <p id="piece-pencils"></p>
+                <br>
+            </div>
+            <div class="media-line">
+                <i class="fa-solid fa-pen-nib"></i>
+                <p id="piece-pens"></p>
+                <br>
+            </div>
+            <div class="media-line">
+                <i class="fa-solid fa-paintbrush"></i>
+                <p id="piece-paint"></p>
+                <br>
+            </div>
+            <a id="purchase-button" class="button">Purchase Prints</a>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; Created by P. David Cress 2025<br>
+                CMST386: Principles of Web Design and Technology II<br>
+                UMGC - Spring 2025<br>
+                Instructor: Prof. Leslie Allen
+            </p>
+            <p><a href="privacy.html">Privacy Policy</a></p>
+            <p id="datetime">Loading current date/time…</p>
+        </div>
+        <section class="call-to-action container">
+            <a href="../index.html" class="button">CMST386 Index</a>
+        </section>
+    </footer>
+    
+    <script>
+        // Date & Time
+        const dtElem = document.getElementById('datetime');
+        dtElem.textContent = new Date().toLocaleString();
+
+        // Determining artwork information/file from URL query
+        const params = new URLSearchParams(window.location.search);
+        const artKey = params.get("art");
+
+        const artData = {
+            piece1: {
+                title: "Elegance",
+                img: "images/piece1-large.png",
+                description: `<strong>Piece Description:</strong>
+                Venom, from the Guilty Gear franchise, gazing into a billiard ball 
+                that is emitting a bright purple light.\n\n`,
+                paper: `Fabriano Artistico Acquarello Extra White watercolor paper`,
+                pencils: `Prismacolor Verithin Colored Pencils`,
+                pens: 'Tachikawa Model 40, Zebra G-Nib & Kuretake ZIG Special Black Ink 60',
+                paint: 'Winsor Newton Cotman watercolor paints'
+            },
+            piece2: {
+                title: "Destroyer",
+                img: "images/piece2-large.png",
+                description: `<strong>Piece Description:</strong>
+                Zappa, from the Guilty Gear franchise, kneeling in the dark 
+                as centipedes and ghost-spheres surround him.\n\n`,
+                paper: `Arches 100% Cotton Hot Press watercolor paper`,
+                pencils: `Prismacolor Verithin Colored Pencils & Caran D'Ache Supracolor II Watercolor Pencils`,
+                pens: 'Winsor Newton Fineliners & Ohuhu Alcohol Markers',
+                paint: 'Winsor Newton Cotman watercolor paints & HIMI Gouache Paints'
+            },
+            piece3: {
+                title: "Moe~~",
+                img: "images/piece3-large.png",
+                description: `<strong>Piece Description:</strong>
+                Travis Touchdown, from the No More Heroes franchise, 
+                struts forward while resting his beam katana resting on his shoulder.\n\n`,
+                paper: `Arches 100% Cotton Hot Press watercolor paper`,
+                pencils: `Caran D'Ache Supracolor II Watercolor Pencils`,
+                pens: 'Winsor Newton Fineliners & Sakura Gellyroll Colored Gel Pens',
+                paint: 'Winsor Newton Cotman watercolor paints'
+            },
+            piece4: {
+                title: "Magic Missile",
+                img: "images/piece4-large.png",
+                description: `<strong>Piece Description:</strong>
+                A young wizard, dressed in modern clothing and standing in an alleyway, 
+                holding a fireball in one hand and a large book in the other.\n\n`,
+                paper: `Strathmore Visions 5x7" Mixed Media Sketchbook Cover`,
+                pencils: `Caran D'Ache Supracolor II Watercolor Pencils`,
+                pens: 'Winsor Newton Fineliners, Zebra Sign Brush Pens & Ohuhu Alcohol Markers',
+                paint: 'N/A'
+            },
+            piece5: {
+                title: "Lumos~!",
+                img: "images/piece5-large.png",
+                description: `<strong>Piece Description:</strong>
+                A young masked wizard, standing on his broom like a surfboard, 
+                flies through the night sky by the light of his wand.\n\n`,
+                paper: `Canson Cold Press watercolor paper`,
+                pencils: `Caran D'Ache Supracolor II Watercolor Pencils`,
+                pens: 'Winsor Newton Fineliners, Ohuhu Alcohol Markers & Sakura Gellyroll Colored Gel Pens',
+                paint: 'N/A'
+            },
+            piece6: {
+                title: "Jet Bomb Set Rush Cyber Radio Funk",
+                img: "images/piece6-large.png",
+                description: `<strong>Piece Description:</strong>
+                Beat (from the Jet Set Radio franchise) and Red (from Bomb Rush Cyber Funk)
+                perform tricks as they skate through the city, cans of spray paint in-hand.\n\n`,
+                paper: `Strathmore 400-series Smooth Bristol Paper`,
+                pencils: `Caran D'Ache Supracolor II Watercolor Pencils`,
+                pens: 'Winsor Newton Fineliners & Ohuhu Alcohol Markers',
+                paint: 'N/A'
+            }
+        };
+
+        const piece = artData[artKey];
+        if (piece) {
+        document.getElementById("piece-title").textContent = piece.title;
+        document.getElementById("piece-img").src = piece.img;
+        document.getElementById("piece-img").alt = piece.title;
+        document.getElementById("piece-description").innerHTML = piece.description.replace(/\n/g, '<br>');
+        document.getElementById("piece-paper").innerHTML = piece.paper.replace(/\n/g, '<br>');
+        document.getElementById("piece-pencils").innerHTML = piece.pencils.replace(/\n/g, '<br>');
+        document.getElementById("piece-pens").innerHTML = piece.pens.replace(/\n/g, '<br>');
+        document.getElementById("piece-paint").innerHTML = piece.paint.replace(/\n/g, '<br>');
+        } else {
+        document.getElementById("piece-title").textContent = "Artwork Not Found";
+        document.getElementById("piece-description").textContent = "Please return to the Gallery";
+        document.getElementById("piece-medium").textContent = "to select a valid piece";
+        document.getElementById("piece-img").style.display = "none";
+        }
+
+        /* 'Purchase Prints' button URL */
+        document.addEventListener("DOMContentLoaded", function () {
+            const purchaseButton = document.getElementById("purchase-button");
+            purchaseButton.href = `print.html?art=${artKey}`;
+        });
+    </script> 
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="web design, student projects, HTML, CSS, CMST386, UMGC, classwork, school">
+    <meta name="description" content="The homepage for my website for artists to share and sell prints of their work">
+    <meta name="author" content="P. David Cress">
+    <meta name="copyright" content="2025 P. David Cress">
+    <meta name="robots" content="index, follow">
+    <title>Gallery Collective: Log-In</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="favicon/favicon.ico" type="image/x-icon">
+    </head>
+<body>
+    <header>
+        <div class="container">
+        <h1 class="site-title">Gallery Collective</h1>
+        <nav aria-label="Main navigation">
+            <ul class="nav-list">
+            <li><a href="project4.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="cart.html">Cart</a></li>
+            <li><a href="account.html" aria-current="page">My Account</a></li>
+            </ul>
+        </nav>
+
+          <div class="search-container">
+            <form action="https://duckduckgo.com/" method="get" class="search-form">
+                <label for="search" class="visually-hidden">Search</label>
+                <input type="text" name="q" id="search" placeholder="Search the site...">
+                <input type="hidden" name="sites" value="example.com"> <!-- Replace with actual domain -->
+                <button type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="login-container">
+        <h2>Log In</h2>
+
+        <!-- Log In Form -->
+        <form action="#" method="post" class="login-form">
+            <div class="form-group">
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" required>
+            </div>
+            <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required>
+            </div>
+            <button type="submit" class="submit-btn">Log In</button>
+        </form>
+
+        <!-- Forgot Password Link -->
+        <div class="forgot-password">
+            <p><a href="#">Forgot your password? Click here to reset it!</a></p>
+        </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+          <p>&copy; Created by P. David Cress 2025<br>
+            CMST386: Principles of Web Design and Technology II<br>
+            UMGC - Spring 2025<br>
+            Instructor: Prof. Leslie Allen
+          </p>
+          <p><a href="privacy.html">Privacy Policy</a></p>
+          <p id="datetime">Loading current date/time…</p>
+        </div>
+        <section class="call-to-action container">
+            <a href="../index.html" class="button">CMST386 Index</a>
+          </section>
+      </footer>
+    
+    <script>
+        // Date & Time
+        const dtElem = document.getElementById('datetime');
+        dtElem.textContent = new Date().toLocaleString();
+    </script> 
+</body>
+</html>
